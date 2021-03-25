@@ -1,0 +1,6 @@
+{   
+    "/users/uid/:uid" : "/users?details.uid=:uid",
+    "/users/name/:name" : "/users?details.name=:name",
+    "/users/mobile_number/:mobile_number" : "/users?details.mobile_number=:mobile_number",
+    "/users/age/:age" : "/users?details.age=:age"
+}

@@ -1,23 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import axios from 'axios';
+import "./App.css";
 
 function App() {
+  const [details, setDetails] = useState({
+    uid:' ',
+    name:' ',
+    mobile_number:' ',
+    age:' '        
+  });
+
+  const handleChange=(e)=>{
+      setDetails( {
+          ...details,
+          [e.target.name]:e.target.value} )
+  }
+
+  const handleSubmit=(e)=>{        
+            
+      alert("Successfully Submitted");
+      axios.post('http://localhost:3001/users/' ,{details})      
+      e.preventDefault()
+    
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Enter some values</h1>
+    <form onSubmit={handleSubmit} >
+      <div>                    
+            <input  type="text" name="uid" placeholder="Id" onChange={handleChange}></input>                        
+      </div>  
+
+      <div>                    
+            <input type="text" name="name" placeholder="Name" onChange={handleChange}></input>                        
+      </div>  
+      
+      <div>
+            <input type="text" name="mobile_number" placeholder="Mobile Number" onChange={handleChange}></input>                      
+             
+      </div>  
+      <div>
+            <input type="text" name="age" placeholder="Age" onChange={handleChange}></input>                    
+      </div>  
+        <input type = "submit" value = "Submit" />
+    </form>
     </div>
   );
 }

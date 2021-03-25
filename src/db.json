@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "details": {
+        "uid": "121",
+        "name": "Ibrahim",
+        "mobile_number": "9791420412",
+        "age": "23"
+      },
+      "id": 1
+    },
+    {
+      "details": {
+        "uid": "122",
+        "name": "Ibrahimansar",
+        "mobile_number": "9791420413",
+        "age": "22"
+      },
+      "id": 2
+    },
+    {
+      "details": {
+        "uid": "123",
+        "name": "Ibrahimansari",
+        "mobile_number": "9791420414",
+        "age": "22"
+      },
+      "id": 3
+    },
+    {
+      "details": {
+        "uid": " ",
+        "name": " ",
+        "mobile_number": " ",
+        "age": " "
+      },
+      "id": 4
+    }
+  ]
+}
